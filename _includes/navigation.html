@@ -1,0 +1,32 @@
+<nav class="topnav">
+  {% for item in site.data.navigation %}
+    {% if item.name == "Home" %}
+      <a href="{{ item.link | relative_url }}" class="icon-home">{{ item.name }}</a>
+    {% elsif item.name == "Songs" %}
+      <a href="{{ item.link | relative_url }}" class="icon-music">{{ item.name }}</a>
+    {% elsif item.name == "Bands" %}
+      <a href="{{ item.link | relative_url }}" class="icon-users">{{ item.name }}</a>
+    {% elsif item.name == "Fanclub" %}
+      <a href="{{ item.link | relative_url }}" class="icon-users">{{ item.name }}</a>
+    {% endif %}
+  {% endfor %}
+</nav>
+<div class="dropdown">
+  <input type="checkbox" id="toggle">
+  <label class="hidden" for="toggle">&#9776;</label>
+  <nav class="navbar">
+    <ul>
+      {% for item in site.data.navigation %}
+        {% if item.name == "Home" %}
+          <a href="{{ item.link | relative_url }}" class="icon-home">{{ item.name }}</a>
+        {% elsif item.name == "Songs" %}
+          <a href="{{ item.link | relative_url }}" class="icon-music">{{ item.name }}</a>
+        {% elsif item.name == "Bands" %}
+          <a href="{{ item.link | relative_url }}" class="icon-users">{{ item.name }}</a>
+        {% elsif item.name == "Fanclub" %}
+          <a href="{{ item.link | relative_url }}" class="icon-users">{{ item.name }}</a>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

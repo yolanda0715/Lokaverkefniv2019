@@ -1,0 +1,18 @@
+---
+layout: default
+title: Songs
+---
+<header>
+	<h1>Songs</h1>
+</header>
+<section class="content"> 
+	<h3>List of songs that will be played at the concert</h3>
+	<ul>
+	  {% for post in site.posts %}
+	    <li>
+	      <h2><a href="{{ post.url | relative_url}}">{{ post.title }}</a></h2>
+	      <p>{{ post.excerpt }}</p>
+	    </li>
+	  {% endfor %}
+	</ul>
+</section>

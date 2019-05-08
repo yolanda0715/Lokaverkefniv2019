@@ -1,0 +1,18 @@
+---
+layout: default
+title: Bands
+---
+<header>
+	<h1>Bands</h1>
+</header>
+<section class="content"> 
+	<ul>
+	  {% for author in site.authors %}
+	    <li>
+	      <h2><a href="{{ author.url | relative_url}}">{{ author.name }}</a></h2>
+	      <h3>{{ author.position }}</h3>
+	      <p>{{ author.content | markdownify }}</p>
+	    </li>
+	  {% endfor %}
+	</ul>
+</section>

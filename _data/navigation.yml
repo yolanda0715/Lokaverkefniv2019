@@ -1,0 +1,8 @@
+- name: Home
+  link: /
+- name: Bands
+  link: /band.html
+- name: Songs
+  link: /song.html
+- name: Fanclub
+  link: /fanclub.html
